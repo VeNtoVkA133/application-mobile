@@ -15,19 +15,23 @@ export default function Home({ navigation }: any) {
                 style={styles.title}
             >Home Screen</Text>
             <TouchableOpacity
-
-
                 onPress={() => navigation.navigate('Calculator')}>
                 <Text
                     style={styles.button}>Калькулятор</Text>
-
             </TouchableOpacity>
-            <TouchableOpacity
 
+            <TouchableOpacity
                 onPress={() => navigation.navigate('Clicker')}>
                 <Text
                     style={styles.button}
                 >Кликер</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+                onPress={() => navigation.navigate('gameCheckers')}>
+                <Text
+                    style={styles.button}
+                >Шашки</Text>
             </TouchableOpacity>
         </View>
     );

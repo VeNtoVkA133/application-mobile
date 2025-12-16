@@ -4,6 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack'
 import Home from '@/router/Router';
 import Calculator from '@/src/calculator';
 import Clicker from '@/src/clicker';
+import gameCheckers from '@/src/gameCheckers';
 
 
 
@@ -18,6 +19,7 @@ export default function App() {
           <Stack.Screen name="Home" component={Home} />
           <Stack.Screen name="Calculator" component={Calculator} />
           <Stack.Screen name="Clicker" component={Clicker} />
+          <Stack.Screen name="gameCheckers" component={gameCheckers} />
 
         </Stack.Navigator>
       </NavigationContainer>

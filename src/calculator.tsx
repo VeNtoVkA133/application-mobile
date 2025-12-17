@@ -2,7 +2,6 @@ import { ImageBackground, Text, View } from "react-native";
 import React, { useState } from "react";
 
 export default function Index() {
-
     const [btn, setRes] = React.useState("")
 
     const ClBtn = (n: string) => {

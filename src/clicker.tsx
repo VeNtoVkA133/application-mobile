@@ -18,7 +18,7 @@ const Clicker = () => {
         else if (hp > 30) {
             return <Image source={require('../assets/images/egg3.png')} />
         }
-        else if (hp > 20 ) {
+        else if (hp > 20) {
             return <Image source={require('../assets/images/egg4.png')} />
         }
         else if (hp > 10) {
@@ -55,7 +55,7 @@ const Clicker = () => {
 
 
     return (
-        <View style={{backgroundColor: "gray"}}>
+        <View style={{ backgroundColor: "gray" }}>
 
             <TouchableOpacity
                 onPress={handlePress}

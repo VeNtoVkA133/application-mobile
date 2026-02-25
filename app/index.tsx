@@ -5,6 +5,7 @@ import Home from '@/router/Router';
 import Calculator from '@/src/calculator';
 import Clicker from '@/src/clicker';
 import gameCheckers from '@/src/gameCheckers';
+import Lift from '@/src/Lift';
 
 
 
@@ -20,6 +21,7 @@ export default function App() {
           <Stack.Screen name="Calculator" component={Calculator} />
           <Stack.Screen name="Clicker" component={Clicker} />
           <Stack.Screen name="gameCheckers" component={gameCheckers} />
+          <Stack.Screen name="Lift" component={Lift} />
 
         </Stack.Navigator>
       </NavigationContainer>

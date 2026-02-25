@@ -33,6 +33,12 @@ export default function Home({ navigation }: any) {
                     style={styles.button}
                 >Шашки</Text>
             </TouchableOpacity>
+            <TouchableOpacity
+                onPress={() => navigation.navigate('Lift')}>
+                <Text
+                    style={styles.button}
+                >Лифт</Text>
+            </TouchableOpacity>
         </View>
     );
 }

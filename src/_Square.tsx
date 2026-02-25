@@ -6,7 +6,6 @@ interface CardProps {
     nextg: (value: string) => void;
 }
 
-
 const Square = (props: CardProps) => {
     return (
         <div
@@ -22,7 +21,7 @@ const Square = (props: CardProps) => {
         >
             <span>{props.id}</span>
             <button style={{ margin: 0, padding: 0,border:"none",background:"none", justifyContent: "none" }} onClick={() => { 
-                props.nextg(props.styleImg) }}>
+                props.nextg(props.styleImg)}}>
                 <Image id="imgBlack" source={require('../assets/images/pointBlack.png')} alt=""
                     style={{
                         width: '39px', height: '39px',

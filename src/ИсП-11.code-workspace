@@ -1,0 +1,29 @@
+{
+	"folders": [
+		{
+			"path": "../../.."
+		},
+		{
+			"path": "../../../Parus-TG-Bot"
+		},
+		{
+			"path": "../../codeRun"
+		},
+		{
+			"path": "../../java"
+		},
+		{
+			"path": "../../MG-Bot"
+		},
+		{
+			"path": "../../fullstack"
+		},
+		{
+			"path": "../../FootBall_arduino"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {}
+}

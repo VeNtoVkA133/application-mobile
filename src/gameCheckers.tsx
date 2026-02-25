@@ -3,46 +3,63 @@ import React, { useState } from "react";
 import Square from "./_Square";
 import { flingGestureHandlerProps } from "react-native-gesture-handler/lib/typescript/handlers/FlingGestureHandler.js";
 const GameCheckers = () => {
+
+    const nextG = () => {
+        console.log("NeeeeeextGGGGG")
+        const newField = field.map(item => {
+            if (item.props.id === 12) { // Пример изменения
+                return { ...item.props, styleImg: "black" };
+            }
+            return item;
+        });
+        setField(newField);
+    }
+
     const CreateField = () =>{
         let test = [];
-        let indef = 10;
+        let indef = 8;
         for(let i=0;i<8;i++){
-            let test2 =[];
-            for(let j =0; j<8;j++){
-                if (j %2){
-                    if (i<3){
-                        test2.push(<Square id={indef} colorSquare="#854e05" styleImg='black' nextg={nextG}/>)
-                    }else if (i>4){
-                        test2.push(<Square id={indef} colorSquare="#854e05" styleImg='white' nextg={nextG}/>)
+            indef = indef+2;
+
+            if(i!%2 && i != 0){
+                for(let j =0; j<8;j++){
+                    indef = indef+1
+                    if (j %2){
+                        if (i<3){
+                            test.push(<Square id={indef} colorSquare="#faeddc" styleImg='' nextg={nextG}/>)
+                        }else if (i>4){
+                            test.push(<Square id={indef} colorSquare="#faeddc" styleImg='' nextg={nextG}/>)
+                        }else{
+                            test.push(<Square id={indef} colorSquare="#faeddc" styleImg='' nextg={nextG}/>)
+
+                        }
                     }else{
-                        test2.push(<Square id={indef} colorSquare="#854e05" styleImg='' nextg={nextG}/>)
+                        test.push(<Square id={indef} colorSquare="#854e05" styleImg='' nextg={nextG}/>)
                     }
-                }else{
-                    test2.push(<Square id={indef} colorSquare="#faeddc" styleImg='' nextg={nextG}/>)
+                }
+            }else{
+                for(let j =0; j<8;j++){
+                    indef = indef+1
+                    if (j %2){
+                        if (i<3){
+                            test.push(<Square id={indef} colorSquare="#854e05" styleImg='' nextg={nextG}/>)
+                        }else if (i>4){
+                            test.push(<Square id={indef} colorSquare="#854e05" styleImg='' nextg={nextG}/>)
+                        }else{
+                            test.push(<Square id={indef} colorSquare="#854e05" styleImg='' nextg={nextG}/>)
+
+                        }
+                    }else{
+                        test.push(<Square id={indef} colorSquare="#faeddc" styleImg='' nextg={nextG}/>)
+                    }
                 }
             }
-            if(i%2){
-                test.push(<div style={{display: 'flex', flexDirection: 'row-reverse'}}>{test2}</div>)
-            }else{
-                test.push(<div style={{display: 'flex', flexDirection: 'row'}}>{test2}</div>)
-            }
 
         }
+        
+        return test}
 
-        return test
-    }
-
-    const nextG = (col: string, id:number) => {
-        if(col == "black"){
-            console.log("res");
-            alert(col);
-        }else if(col == 'white'){
-            alert(col);
-        }
-    }
-
-
-
+    const [field, setField] = useState(CreateField);
     return (
         <div 
         style={{
@@ -50,8 +67,7 @@ const GameCheckers = () => {
             display: 'flex',
             flexWrap: 'wrap'
         }}>
-            {CreateField()}
-
+            {field}
         </div>
     )
 }

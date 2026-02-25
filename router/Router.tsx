@@ -39,6 +39,12 @@ export default function Home({ navigation }: any) {
                     style={styles.button}
                 >Лифт</Text>
             </TouchableOpacity>
+            <TouchableOpacity
+                onPress={() => navigation.navigate('shakerSort')}>
+                <Text
+                    style={styles.button}
+                >Шейкерная сортировка</Text>
+            </TouchableOpacity>
         </View>
     );
 }

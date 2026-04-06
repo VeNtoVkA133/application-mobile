@@ -15,6 +15,12 @@ export default function Home({ navigation }: any) {
                     style={styles.title}
                 >Home Screen</Text>
                 <TouchableOpacity
+                    onPress={() => navigation.navigate('WeatherApp')}>
+                    <Text
+                        style={styles.button}
+                    >Погода</Text>
+                </TouchableOpacity>
+                <TouchableOpacity
                     onPress={() => navigation.navigate('Calculator')}>
                     <Text
                         style={styles.button}>Калькулятор</Text>

@@ -9,6 +9,8 @@ import Lift from '@/src/Pages/Lift';
 import shakerSort from '@/src/Pages/shakerSort';
 import cafeMachine from '@/src/Pages/cafeMachine';
 import PeacefulRooks from '@/src/Pages/PeacefulRooks';
+import WeatherApp from '@/src/Pages/WeatherApp';
+
 
 
 
@@ -21,6 +23,7 @@ export default function App() {
         <Stack.Navigator initialRouteName="Home">
           
           <Stack.Screen name="Home" component={Home} />
+          <Stack.Screen name="WeatherApp" component={WeatherApp} />
           <Stack.Screen name="Calculator" component={Calculator} />
           <Stack.Screen name="Clicker" component={Clicker} />
           <Stack.Screen name="gameCheckers" component={gameCheckers} />
@@ -28,7 +31,6 @@ export default function App() {
           <Stack.Screen name="shakerSort" component={shakerSort} />
           <Stack.Screen name="cafeMachine" component={cafeMachine} />
           <Stack.Screen name="PeacefulRooks" component={PeacefulRooks} />
-
 
         </Stack.Navigator>
       </NavigationContainer>

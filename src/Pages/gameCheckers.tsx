@@ -1,6 +1,6 @@
 import { View, StyleSheet, TouchableOpacity, Text, Image, ImageBackground } from "react-native"
 import React, { useState } from "react";
-import Square from "./_Square";
+import Square from "../Components/_Square";
 import { flingGestureHandlerProps } from "react-native-gesture-handler/lib/typescript/handlers/FlingGestureHandler.js";
 const GameCheckers = () => {
 

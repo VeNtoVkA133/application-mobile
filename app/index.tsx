@@ -2,11 +2,13 @@ import React from 'react';
 import { NavigationContainer, NavigationIndependentTree } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack'
 import Home from '@/router/Router';
-import Calculator from '@/src/calculator';
-import Clicker from '@/src/clicker';
-import gameCheckers from '@/src/gameCheckers';
-import Lift from '@/src/Lift';
-import shakerSort from '@/src/shakerSort';
+import Calculator from '@/src/Pages/calculator';
+import Clicker from '@/src/Pages/clicker';
+import gameCheckers from '@/src/Pages/gameCheckers';
+import Lift from '@/src/Pages/Lift';
+import shakerSort from '@/src/Pages/shakerSort';
+import cafeMachine from '@/src/Pages/cafeMachine';
+import PeacefulRooks from '@/src/Pages/PeacefulRooks';
 
 
 
@@ -24,6 +26,9 @@ export default function App() {
           <Stack.Screen name="gameCheckers" component={gameCheckers} />
           <Stack.Screen name="Lift" component={Lift} />
           <Stack.Screen name="shakerSort" component={shakerSort} />
+          <Stack.Screen name="cafeMachine" component={cafeMachine} />
+          <Stack.Screen name="PeacefulRooks" component={PeacefulRooks} />
+
 
         </Stack.Navigator>
       </NavigationContainer>

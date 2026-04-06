@@ -2,50 +2,63 @@ import { navigate } from 'expo-router/build/global-state/routing';
 import React from 'react';
 import { Text, View, TouchableOpacity } from 'react-native';
 import { StyleSheet } from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
 
 
 export default function Home({ navigation }: any) {
 
 
     return (
-        <View
-            style={styles.container}
-        >
-            <Text
-                style={styles.title}
-            >Home Screen</Text>
-            <TouchableOpacity
-                onPress={() => navigation.navigate('Calculator')}>
+        <ScrollView>
+            <View style={styles.container}>
                 <Text
-                    style={styles.button}>Калькулятор</Text>
-            </TouchableOpacity>
+                    style={styles.title}
+                >Home Screen</Text>
+                <TouchableOpacity
+                    onPress={() => navigation.navigate('Calculator')}>
+                    <Text
+                        style={styles.button}>Калькулятор</Text>
+                </TouchableOpacity>
 
-            <TouchableOpacity
-                onPress={() => navigation.navigate('Clicker')}>
-                <Text
-                    style={styles.button}
-                >Кликер</Text>
-            </TouchableOpacity>
+                <TouchableOpacity
+                    onPress={() => navigation.navigate('Clicker')}>
+                    <Text
+                        style={styles.button}
+                    >Кликер</Text>
+                </TouchableOpacity>
 
-            <TouchableOpacity
-                onPress={() => navigation.navigate('gameCheckers')}>
-                <Text
-                    style={styles.button}
-                >Шашки</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-                onPress={() => navigation.navigate('Lift')}>
-                <Text
-                    style={styles.button}
-                >Лифт</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-                onPress={() => navigation.navigate('shakerSort')}>
-                <Text
-                    style={styles.button}
-                >Шейкерная сортировка</Text>
-            </TouchableOpacity>
-        </View>
+                <TouchableOpacity
+                    onPress={() => navigation.navigate('gameCheckers')}>
+                    <Text
+                        style={styles.button}
+                    >Шашки</Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                    onPress={() => navigation.navigate('Lift')}>
+                    <Text
+                        style={styles.button}
+                    >Code Run Лифт</Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                    onPress={() => navigation.navigate('shakerSort')}>
+                    <Text
+                        style={styles.button}
+                    >Шейкерная сортировка</Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                    onPress={() => navigation.navigate('cafeMachine')}>
+                    <Text
+                        style={styles.button}
+                    >Кафе автомат</Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                    onPress={() => navigation.navigate('PeacefulRooks')}>
+                    <Text
+                        style={styles.button}
+                    >Мирные ладьи</Text>
+                </TouchableOpacity>
+            </View>
+        </ScrollView>
     );
 }
 

@@ -22,13 +22,13 @@ const Square = (props: CardProps) => {
             <span>{props.id}</span>
             <button style={{ margin: 0, padding: 0,border:"none",background:"none", justifyContent: "none" }} onClick={() => { 
                 props.nextg(props.styleImg)}}>
-                <Image id="imgBlack" source={require('../assets/images/pointBlack.png')} alt=""
+                <Image id="imgBlack" source={require('../../assets/images/pointBlack.png')} alt=""
                     style={{
                         width: '39px', height: '39px',
                         display: props.styleImg == 'black' ? "flex" : "none"
                     }}
                 />
-                <Image id="imgWhite" source={require('../assets/images/pointWhite.png')} alt=""
+                <Image id="imgWhite" source={require('../../assets/images/pointWhite.png')} alt=""
                     style={{
                         width: '39px', height: '39px',
                         display: props.styleImg == 'white' ? "flex" : "none"

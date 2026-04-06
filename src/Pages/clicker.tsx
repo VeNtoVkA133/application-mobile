@@ -10,22 +10,22 @@ const Clicker = () => {
 
     const changeImage = () => {
         if (hp > 50) {
-            return <Image source={require('../assets/images/egg1.png')} />
+            return <Image source={require('../../assets/images/egg1.png')} />
         }
         else if (hp > 40) {
-            return <Image source={require('../assets/images/egg2.png')} />
+            return <Image source={require('../../assets/images/egg2.png')} />
         }
         else if (hp > 30) {
-            return <Image source={require('../assets/images/egg3.png')} />
+            return <Image source={require('../../assets/images/egg3.png')} />
         }
         else if (hp > 20) {
-            return <Image source={require('../assets/images/egg4.png')} />
+            return <Image source={require('../../assets/images/egg4.png')} />
         }
         else if (hp > 10) {
-            return <Image source={require('../assets/images/egg5.png')} />
+            return <Image source={require('../../assets/images/egg5.png')} />
         }
         else if (hp > 5) {
-            return <Image source={require('../assets/images/egg6.png')} />
+            return <Image source={require('../../assets/images/egg6.png')} />
         }
 
         if (hp === 0) {

@@ -66,6 +66,12 @@ export default function Home({ navigation }: any) {
                         style={styles.button}
                     >C3pgame</Text>
                 </TouchableOpacity>
+                <TouchableOpacity
+                    onPress={() => navigation.navigate('graph')}>
+                    <Text
+                        style={styles.button}
+                    >Графики</Text>
+                </TouchableOpacity>
             </View>
         </ScrollView>
     );

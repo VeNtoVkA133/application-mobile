@@ -11,21 +11,18 @@ export default function Home({ navigation }: any) {
     return (
         <ScrollView>
             <View style={styles.container}>
-                <Text
-                    style={styles.title}
-                >Home Screen</Text>
+                <TouchableOpacity>
+                    <a href='https://cloud.mail.ru/public/Ttto/sGbdL6bJu?weblink=Ttto/sGbdL6bJu' target='_blank' rel="noopener noreferrer" style={styles.title}>Home Screen</a>
+                </TouchableOpacity>
+
                 <TouchableOpacity
                     onPress={() => navigation.navigate('WeatherApp')}>
-                    <Text
-                        style={styles.button}
-                    >Погода</Text>
+                    <Text style={styles.button}>Погода</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
                     onPress={() => navigation.navigate('Calculator')}>
-                    <Text
-                        style={styles.button}>Калькулятор</Text>
+                    <Text style={styles.button}>Калькулятор</Text>
                 </TouchableOpacity>
-
                 <TouchableOpacity
                     onPress={() => navigation.navigate('Clicker')}>
                     <Text
@@ -63,6 +60,12 @@ export default function Home({ navigation }: any) {
                         style={styles.button}
                     >Мирные ладьи</Text>
                 </TouchableOpacity>
+                <TouchableOpacity
+                    onPress={() => navigation.navigate('C3pgame')}>
+                    <Text
+                        style={styles.button}
+                    >C3pgame</Text>
+                </TouchableOpacity>
             </View>
         </ScrollView>
     );
@@ -75,10 +78,13 @@ const styles = StyleSheet.create({
         justifyContent: "space-between",
         alignItems: "center",
     },
+
     title: {
         padding: 20,
         fontSize: 30,
-        fontWeight: 300
+        fontWeight: 300,
+        color: "gray",
+        textDecorationLine: "none",
     },
     button: {
         padding: 30,

@@ -3,7 +3,7 @@ interface CardProps {
     id: number,
     colorSquare: string,
     styleImg: string,
-    nextg: (value: string) => void;
+    nextg: (value: string) => void,
 }
 
 const Square = (props: CardProps) => {
@@ -19,21 +19,18 @@ const Square = (props: CardProps) => {
             }}
 
         >
-            <span>{props.id}</span>
-            <button style={{ margin: 0, padding: 0,border:"none",background:"none", justifyContent: "none" }} onClick={() => { 
-                props.nextg(props.styleImg)}}>
+            <button style={{ margin: 0, padding: 0,border:"none",background:"none", justifyContent: "none" }} onClick={() => {props.nextg(props.styleImg)}}>
                 <Image id="imgBlack" source={require('../../assets/images/pointBlack.png')} alt=""
                     style={{
                         width: '39px', height: '39px',
-                        display: props.styleImg == 'black' ? "flex" : "none"
-                    }}
+                        display: props.styleImg == 'black' ? "flex" : "none"}}
                 />
                 <Image id="imgWhite" source={require('../../assets/images/pointWhite.png')} alt=""
                     style={{
                         width: '39px', height: '39px',
-                        display: props.styleImg == 'white' ? "flex" : "none"
-                    }}
+                        display: props.styleImg == 'white' ? "flex" : "none"}}
                 />
+                {props.id}
             </button>
 
         </div>

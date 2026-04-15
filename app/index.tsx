@@ -10,6 +10,7 @@ import shakerSort from '@/src/Pages/shakerSort';
 import cafeMachine from '@/src/Pages/cafeMachine';
 import PeacefulRooks from '@/src/Pages/PeacefulRooks';
 import WeatherApp from '@/src/Pages/WeatherApp';
+import C3pgame from '@/src/Pages/c3pgame'
 
 
 
@@ -31,6 +32,8 @@ export default function App() {
           <Stack.Screen name="shakerSort" component={shakerSort} />
           <Stack.Screen name="cafeMachine" component={cafeMachine} />
           <Stack.Screen name="PeacefulRooks" component={PeacefulRooks} />
+          <Stack.Screen name="C3pgame" component={C3pgame} />
+          
 
         </Stack.Navigator>
       </NavigationContainer>

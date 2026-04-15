@@ -2,75 +2,87 @@ import { View, StyleSheet, TouchableOpacity, Text, Image, ImageBackground } from
 import React, { useState } from "react";
 import Square from "../Components/_Square";
 import { flingGestureHandlerProps } from "react-native-gesture-handler/lib/typescript/handlers/FlingGestureHandler.js";
-const GameCheckers = () => {
 
-    const nextG = () => {
-        console.log("NeeeeeextGGGGG")
-        const newField = field.map(item => {
-            if (item.props.id === 12) { // Пример изменения
-                return { ...item.props, styleImg: "black" };
-            }
-            return item;
-        });
-        setField(newField);
+// Типы фигур
+type PieceType = 'man' | 'king';
+type Player = 'white' | 'black' | null;
+
+// Интерфейс для клетки
+interface Cell {
+  piece: Player;
+  type: PieceType | null;
+  isHighlighted: boolean;
+}
+
+interface massType {
+    id: number,
+    color: string
+}
+
+
+const stratInitField = ():Cell[][] => {
+  const newField: Cell[][] = Array(8).fill(null).map(() =>
+    Array(8).fill(null).map(() => ({
+      piece: null,
+      type: null,
+      isHighlighted: false,
+    }))
+  );
+
+    // Расстановка черных шашек (сверху)
+  for (let row = 0; row < 3; row++) {
+    for (let col = 0; col < 8; col++) {
+      if ((row + col) % 2 === 1) {
+        newField[row][col] = {
+          piece: 'black',
+          type: 'man',
+          isHighlighted: false,
+        };
+      }
+    }
+  }
+
+  // Расстановка белых шашек (снизу)
+  for (let row = 5; row < 8; row++) {
+    for (let col = 0; col < 8; col++) {
+      if ((row + col) % 2 === 1) {
+        newField[row][col] = {
+          piece: 'white',
+          type: 'man',
+          isHighlighted: false,
+        };
+      }
+    }
+  }
+
+  return newField;
+};
+
+
+
+
+const GameCheckers = () => {
+    const [field, setField] = useState<Cell[][]>(stratInitField());
+    const [currentPlayer, setCurrentPlayer] = useState<Player>('white');
+    const [selectedPiece, setSelectedPiece] = useState<{
+      row: number;
+      col: number;
+    } | null>(null);
+
+
+    const handleClick = () => {
+      setField(stratInitField())
     }
 
-    const CreateField = () =>{
-        let test = [];
-        let indef = 8;
-        for(let i=0;i<8;i++){
-            indef = indef+2;
 
-            if(i!%2 && i != 0){
-                for(let j =0; j<8;j++){
-                    indef = indef+1
-                    if (j %2){
-                        if (i<3){
-                            test.push(<Square id={indef} colorSquare="#faeddc" styleImg='' nextg={nextG}/>)
-                        }else if (i>4){
-                            test.push(<Square id={indef} colorSquare="#faeddc" styleImg='' nextg={nextG}/>)
-                        }else{
-                            test.push(<Square id={indef} colorSquare="#faeddc" styleImg='' nextg={nextG}/>)
-
-                        }
-                    }else{
-                        test.push(<Square id={indef} colorSquare="#854e05" styleImg='' nextg={nextG}/>)
-                    }
-                }
-            }else{
-                for(let j =0; j<8;j++){
-                    indef = indef+1
-                    if (j %2){
-                        if (i<3){
-                            test.push(<Square id={indef} colorSquare="#854e05" styleImg='' nextg={nextG}/>)
-                        }else if (i>4){
-                            test.push(<Square id={indef} colorSquare="#854e05" styleImg='' nextg={nextG}/>)
-                        }else{
-                            test.push(<Square id={indef} colorSquare="#854e05" styleImg='' nextg={nextG}/>)
-
-                        }
-                    }else{
-                        test.push(<Square id={indef} colorSquare="#faeddc" styleImg='' nextg={nextG}/>)
-                    }
-                }
-            }
-
-        }
-        
-        return test}
-
-    const [field, setField] = useState(CreateField);
     return (
-        <div 
-        style={{
-            padding: '5px',
-            display: 'flex',
-            flexWrap: 'wrap'
-        }}>
-            {field}
-        </div>
+        <main style={{}}>
+            <div>
+              <button onClick={handleClick}>новая игра</button>
+                {field}
+            </div>
+        </main>
     )
 }
 
 export default GameCheckers
-

@@ -14,6 +14,10 @@ export default function Home({ navigation }: any) {
                 <TouchableOpacity>
                     <a href='https://cloud.mail.ru/public/Ttto/sGbdL6bJu?weblink=Ttto/sGbdL6bJu' target='_blank' rel="noopener noreferrer" style={styles.title}>Home Screen</a>
                 </TouchableOpacity>
+                <TouchableOpacity
+                    onPress={() => navigation.navigate('Notes')}>
+                    <Text style={styles.button}>Заметки</Text>
+                </TouchableOpacity>
             </div>
             <div style={{ display: 'flex', justifyContent: 'center'}}>
                 <View style={styles.container}>

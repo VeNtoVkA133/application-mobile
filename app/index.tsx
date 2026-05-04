@@ -12,6 +12,7 @@ import PeacefulRooks from '@/src/Pages/PeacefulRooks';
 import WeatherApp from '@/src/Pages/WeatherApp';
 import C3pgame from '@/src/Pages/c3pgame'
 import graph from '@/src/Pages/graph'
+import notes from '@/src/Pages/notes'
 
 
 
@@ -26,6 +27,7 @@ export default function App() {
         <Stack.Navigator initialRouteName="Home">
           
           <Stack.Screen name="Home" component={Home} />
+          <Stack.Screen name="Notes" component={notes} />
           <Stack.Screen name="WeatherApp" component={WeatherApp} />
           <Stack.Screen name="Calculator" component={Calculator} />
           <Stack.Screen name="Clicker" component={Clicker} />

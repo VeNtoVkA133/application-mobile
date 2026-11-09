@@ -13,6 +13,7 @@ import WeatherApp from '@/src/Pages/WeatherApp';
 import C3pgame from '@/src/Pages/c3pgame'
 import graph from '@/src/Pages/graph'
 import notes from '@/src/Pages/notes'
+import cipher from '@/src/Pages/cipher'
 
 
 
@@ -38,6 +39,7 @@ export default function App() {
           <Stack.Screen name="PeacefulRooks" component={PeacefulRooks} />
           <Stack.Screen name="C3pgame" component={C3pgame} />
           <Stack.Screen name="graph" component={graph} />
+          <Stack.Screen name="cipher" component={cipher} />
 
         </Stack.Navigator>
       </NavigationContainer>

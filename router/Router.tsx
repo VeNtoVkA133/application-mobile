@@ -48,6 +48,12 @@ export default function Home({ navigation }: any) {
                             style={styles.button}
                         >Code Run Лифт</Text>
                     </TouchableOpacity>
+                    <TouchableOpacity
+                        onPress={() => navigation.navigate('cipher')}>
+                        <Text
+                            style={styles.button}
+                        >Шифр</Text>
+                    </TouchableOpacity>
                 </View>
                 <View style={styles.container}>
                                         <TouchableOpacity

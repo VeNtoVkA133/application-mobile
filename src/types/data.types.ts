@@ -11,3 +11,7 @@ export type dataNote = {
     name: string,
     description: string,
 }
+
+export type dataCipher = {
+    text: string,
+}
